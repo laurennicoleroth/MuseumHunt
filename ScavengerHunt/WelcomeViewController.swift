@@ -69,7 +69,7 @@ class WelcomeViewController: UIViewController, CLLocationManagerDelegate {
                 if let data = response.data {
                     let json = JSON(data: data)
                     let places = PlaceJSONParser.createFrom(json)
-                    self.viewPlaces(places)
+//                    self.viewPlaces(places)
                     
                     
                     let coordinates = CLLocationCoordinate2DMake(self.latitude, self.longitude)

@@ -56,19 +56,22 @@ class WelcomeViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func getPlaces(){
-        
+        print("getting places")
         let params: [String:AnyObject] = ["key": Constants.Keys.GoogleKey,
                                           "radius": "2000",
                                           "location": "\(latitude)," + "\(longitude)",
                                           "rankBy": "distance",
-                                          "types": "restaurant|cafe"]
+                                          "types": "museum"]
         
         Alamofire.request(.GET, Constants.Url.GoogleApiPlaceSearchJson, parameters: params)
             .responseJSON {
                 response in
+                
+                print(response)
                 if let data = response.data {
                     let json = JSON(data: data)
                     let places = PlaceJSONParser.createFrom(json)
+                    print(places)
 //                    self.viewPlaces(places)
                     
                     
@@ -97,6 +100,8 @@ class WelcomeViewController: UIViewController, CLLocationManagerDelegate {
         
         //get coordinates from location manager
         showActivityIndicator()
+        getPlaces()
+        hideActivityIndicator()
 //        self.locationManager?.startUpdatingLocation()
     }
     

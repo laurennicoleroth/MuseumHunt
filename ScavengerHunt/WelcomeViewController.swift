@@ -25,7 +25,15 @@ class WelcomeViewController: UIViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
         activityIndicator.alpha = 0.0
 
-        print(Constants.Keys.GoogleKey)
+        setupLocationManager()
+    }
+    
+    func setupLocationManager() {
+        locationManager = CLLocationManager()
+        self.locationManager?.delegate = self
+        self.locationManager?.desiredAccuracy = kCLLocationAccuracyBest
+        self.locationManager?.requestAlwaysAuthorization()
+        self.locationManager?.distanceFilter = 100.0
     }
 
     override func didReceiveMemoryWarning() {

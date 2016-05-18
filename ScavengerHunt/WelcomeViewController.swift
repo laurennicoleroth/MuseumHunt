@@ -54,6 +54,39 @@ class WelcomeViewController: UIViewController, CLLocationManagerDelegate {
         }
         
     }
+    
+    func getPlaces(){
+        
+        let params: [String:AnyObject] = ["key": Constants.Keys.GoogleKey,
+                                          "radius": "2000",
+                                          "location": "\(latitude)," + "\(longitude)",
+                                          "rankBy": "distance",
+                                          "types": "restaurant|cafe"]
+        
+        Alamofire.request(.GET, Constants.Url.GoogleApiPlaceSearchJson, parameters: params)
+            .responseJSON {
+                response in
+                if let data = response.data {
+                    let json = JSON(data: data)
+                    let places = PlaceJSONParser.createFrom(json)
+                    self.viewPlaces(places)
+                    
+                    
+                    let coordinates = CLLocationCoordinate2DMake(self.latitude, self.longitude)
+                    let geoCoder = GMSGeocoder()
+                    geoCoder.reverseGeocodeCoordinate(coordinates, completionHandler: {
+                        (response, error) -> Void in
+                        
+                        let address = response?.firstResult()
+                        print(address)
+                        
+                    })
+                    
+                    
+                }
+        }
+        
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -10,6 +10,7 @@
 		712304F4D1388D1109E3A4B7 /* Pods_ScavengerHuntTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC33A3C561072FF3283332BB /* Pods_ScavengerHuntTests.framework */; };
 		9614A1921CED06E600A648A4 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9614A1911CED06E600A648A4 /* LocationViewController.swift */; };
 		9614A1941CED125F00A648A4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9614A1931CED125F00A648A4 /* Constants.swift */; };
+		9614A1961CED1E8000A648A4 /* PlaceJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9614A1951CED1E8000A648A4 /* PlaceJSONParser.swift */; };
 		96FE2C281CECF059000350FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FE2C271CECF059000350FF /* AppDelegate.swift */; };
 		96FE2C2D1CECF059000350FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96FE2C2B1CECF059000350FF /* Main.storyboard */; };
 		96FE2C2F1CECF059000350FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96FE2C2E1CECF059000350FF /* Assets.xcassets */; };
@@ -42,6 +43,7 @@
 		95EE4DE7CFAC04F7F312D152 /* Pods-ScavengerHunt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScavengerHunt.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScavengerHunt/Pods-ScavengerHunt.release.xcconfig"; sourceTree = "<group>"; };
 		9614A1911CED06E600A648A4 /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationViewController.swift; path = ../../Scavenger/Scavenger/LocationViewController.swift; sourceTree = "<group>"; };
 		9614A1931CED125F00A648A4 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = ../../inspiration/Places/Places/Constants.swift; sourceTree = "<group>"; };
+		9614A1951CED1E8000A648A4 /* PlaceJSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceJSONParser.swift; sourceTree = "<group>"; };
 		96FE2C241CECF059000350FF /* ScavengerHunt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScavengerHunt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96FE2C271CECF059000350FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96FE2C2C1CECF059000350FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 			children = (
 				9614A1931CED125F00A648A4 /* Constants.swift */,
 				96FE2C4A1CECF275000350FF /* Observable.swift */,
+				9614A1951CED1E8000A648A4 /* PlaceJSONParser.swift */,
 				96FE2C4B1CECF275000350FF /* LocationService.swift */,
 				96FE2C4C1CECF275000350FF /* Error.swift */,
 				96FE2C7A1CED056D000350FF /* Models */,
@@ -427,6 +430,7 @@
 				96FE2C6B1CECFBD6000350FF /* WelcomeViewController.swift in Sources */,
 				96FE2C4F1CECF275000350FF /* LocationService.swift in Sources */,
 				9614A1941CED125F00A648A4 /* Constants.swift in Sources */,
+				9614A1961CED1E8000A648A4 /* PlaceJSONParser.swift in Sources */,
 				96FE2C501CECF275000350FF /* Error.swift in Sources */,
 				96FE2C731CED0501000350FF /* ListViewModel.swift in Sources */,
 				96FE2C741CED0501000350FF /* LocationViewModel.swift in Sources */,

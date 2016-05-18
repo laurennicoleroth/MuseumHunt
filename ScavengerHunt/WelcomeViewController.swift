@@ -61,7 +61,7 @@ class WelcomeViewController: UIViewController, CLLocationManagerDelegate {
                                           "radius": "2000",
                                           "location": "40.7484," + "-73.9857",
                                           "rankBy": "distance",
-                                          "types": "restaurant|cafe"]
+                                          "types": "museum"]
         
         Alamofire.request(.GET, Constants.Url.GoogleApiPlaceSearchJson, parameters: params)
             .responseJSON {

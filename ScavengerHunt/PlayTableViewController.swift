@@ -7,17 +7,32 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class PlayTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-         self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        Alamofire.request(.GET, "http://dev-hl.sherlockpipeline.com/api/getFilterItems").responseJSON { (response) in
+            
+            if let value = response.result.value {
+                
+                let json = JSON(value)
+                
+                for i in 1...20 {
+                    
+                    let id = json["\(i)"].dictionaryValue
+                    
+                    if let height = id["height"]?.stringValue {
+                        
+                        print(height)
+                    }
+                }
+            }
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {

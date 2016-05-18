@@ -13,6 +13,10 @@
 		96FE2C2F1CECF059000350FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96FE2C2E1CECF059000350FF /* Assets.xcassets */; };
 		96FE2C321CECF059000350FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96FE2C301CECF059000350FF /* LaunchScreen.storyboard */; };
 		96FE2C3D1CECF059000350FF /* ScavengerHuntTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FE2C3C1CECF059000350FF /* ScavengerHuntTests.swift */; };
+		96FE2C4E1CECF275000350FF /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FE2C4A1CECF275000350FF /* Observable.swift */; };
+		96FE2C4F1CECF275000350FF /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FE2C4B1CECF275000350FF /* LocationService.swift */; };
+		96FE2C501CECF275000350FF /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FE2C4C1CECF275000350FF /* Error.swift */; };
+		96FE2C511CECF275000350FF /* ForecastDateTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FE2C4D1CECF275000350FF /* ForecastDateTime.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,10 @@
 		96FE2C381CECF059000350FF /* ScavengerHuntTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScavengerHuntTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		96FE2C3C1CECF059000350FF /* ScavengerHuntTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScavengerHuntTests.swift; sourceTree = "<group>"; };
 		96FE2C3E1CECF059000350FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96FE2C4A1CECF275000350FF /* Observable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Observable.swift; path = ../../inspiration/SwiftWeather/SwiftWeather/Observable.swift; sourceTree = "<group>"; };
+		96FE2C4B1CECF275000350FF /* LocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationService.swift; path = ../../inspiration/SwiftWeather/SwiftWeather/LocationService.swift; sourceTree = "<group>"; };
+		96FE2C4C1CECF275000350FF /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Error.swift; path = ../../inspiration/SwiftWeather/SwiftWeather/Error.swift; sourceTree = "<group>"; };
+		96FE2C4D1CECF275000350FF /* ForecastDateTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForecastDateTime.swift; path = ../../inspiration/SwiftWeather/SwiftWeather/ForecastDateTime.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +85,7 @@
 		96FE2C261CECF059000350FF /* ScavengerHunt */ = {
 			isa = PBXGroup;
 			children = (
+				96FE2C491CECF265000350FF /* Common */,
 				96FE2C271CECF059000350FF /* AppDelegate.swift */,
 				96FE2C291CECF059000350FF /* ViewController.swift */,
 				96FE2C2B1CECF059000350FF /* Main.storyboard */,
@@ -94,6 +103,17 @@
 				96FE2C3E1CECF059000350FF /* Info.plist */,
 			);
 			path = ScavengerHuntTests;
+			sourceTree = "<group>";
+		};
+		96FE2C491CECF265000350FF /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				96FE2C4A1CECF275000350FF /* Observable.swift */,
+				96FE2C4B1CECF275000350FF /* LocationService.swift */,
+				96FE2C4C1CECF275000350FF /* Error.swift */,
+				96FE2C4D1CECF275000350FF /* ForecastDateTime.swift */,
+			);
+			name = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,7 +217,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96FE2C511CECF275000350FF /* ForecastDateTime.swift in Sources */,
+				96FE2C4E1CECF275000350FF /* Observable.swift in Sources */,
 				96FE2C2A1CECF059000350FF /* ViewController.swift in Sources */,
+				96FE2C4F1CECF275000350FF /* LocationService.swift in Sources */,
+				96FE2C501CECF275000350FF /* Error.swift in Sources */,
 				96FE2C281CECF059000350FF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -35,6 +35,25 @@ class WelcomeViewController: UIViewController, CLLocationManagerDelegate {
         self.locationManager?.requestAlwaysAuthorization()
         self.locationManager?.distanceFilter = 100.0
     }
+    
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        //stop location manager
+        self.locationManager?.stopUpdatingLocation()
+        
+        if let currentLocation: CLLocation = locations.last {
+            
+            print(currentLocation)
+            latitude = currentLocation.coordinate.latitude
+            longitude = currentLocation.coordinate.longitude
+            
+            print(latitude)
+            print(longitude)
+            
+            
+        }
+        
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -12,10 +12,18 @@ import SwiftyJSON
 import CoreLocation
 import GoogleMaps
 
-class WelcomeViewController: UIViewController {
+class WelcomeViewController: UIViewController, CLLocationManagerDelegate {
+    
+    var locationManager: CLLocationManager?
+    var latitude: Double = 0.0
+    var longitude: Double = 0.0
+    
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        activityIndicator.alpha = 0.0
 
         print(Constants.Keys.GoogleKey)
     }

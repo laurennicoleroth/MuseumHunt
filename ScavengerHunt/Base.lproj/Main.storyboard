@@ -64,13 +64,19 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="oc4-Ge-ko5">
+                                        <rect key="frame" x="290" y="459" width="20" height="20"/>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="RUT-Iz-H7q" firstAttribute="top" secondItem="ArJ-cR-E0N" secondAttribute="top" id="58E-XD-GPd"/>
+                                    <constraint firstItem="oc4-Ge-ko5" firstAttribute="centerX" secondItem="c2G-o8-jE9" secondAttribute="centerX" id="F2Y-Xy-CAP"/>
                                     <constraint firstAttribute="trailing" secondItem="4Oi-6s-p1h" secondAttribute="trailing" constant="31" id="KxP-z1-zhJ"/>
                                     <constraint firstItem="RUT-Iz-H7q" firstAttribute="leading" secondItem="c2G-o8-jE9" secondAttribute="leadingMargin" id="OWP-Ne-nJt"/>
                                     <constraint firstItem="RUT-Iz-H7q" firstAttribute="baseline" secondItem="ArJ-cR-E0N" secondAttribute="firstBaseline" id="Omr-Yr-KY0"/>
+                                    <constraint firstAttribute="bottom" secondItem="oc4-Ge-ko5" secondAttribute="bottom" constant="121" id="QTX-lA-scc"/>
+                                    <constraint firstItem="oc4-Ge-ko5" firstAttribute="centerX" secondItem="c2G-o8-jE9" secondAttribute="centerX" id="RX4-KT-9yS"/>
                                     <constraint firstItem="ArJ-cR-E0N" firstAttribute="trailing" secondItem="c2G-o8-jE9" secondAttribute="trailingMargin" id="TjC-aC-coU"/>
                                     <constraint firstItem="RUT-Iz-H7q" firstAttribute="bottom" secondItem="c2G-o8-jE9" secondAttribute="bottomMargin" id="jBr-Wz-eCA"/>
                                     <constraint firstItem="4Oi-6s-p1h" firstAttribute="top" secondItem="c2G-o8-jE9" secondAttribute="top" constant="92" id="jhh-Of-bua"/>
@@ -91,6 +97,9 @@
                             <constraint firstItem="i2x-r9-1nl" firstAttribute="leading" secondItem="Met-zu-PaY" secondAttribute="leading" id="tO2-yT-WbI"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="oc4-Ge-ko5" id="03K-cb-f76"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9uZ-cw-BO6" sceneMemberID="firstResponder"/>
             </objects>
@@ -105,11 +114,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlaceCell" rowHeight="135" id="EQ3-79-Y4b" customClass="PlaceTableViewCell" customModule="Places" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlaceCell" rowHeight="135" id="EQ3-79-Y4b" customClass="PlaceTableViewCell" customModule="ScavengerHunt" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="135"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EQ3-79-Y4b" id="gBy-O6-LXB">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="134.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="135"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4qP-GF-yJx">
@@ -190,7 +199,7 @@
                                 <rect key="frame" x="0.0" y="227" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ofk-Gr-47g" id="ERl-NQ-xDq">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -201,12 +210,16 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="Hco-zq-B64">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="jXH-n5-g49"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="jXH-n5-g49">
+                            <connections>
+                                <segue destination="66Q-3L-q2U" kind="show" id="PK9-rq-LmJ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dYh-rv-Xty" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="135" y="2072"/>
+            <point key="canvasLocation" x="-503" y="1317"/>
         </scene>
         <!--Scavenger Hunt Locations-->
         <scene sceneID="wPa-D5-Kc5">
@@ -248,7 +261,7 @@
                                 <rect key="frame" x="0.0" y="136" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mwg-pA-BaQ" id="yRZ-tJ-QQS">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -259,7 +272,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Scavenger Hunt Locations" id="9kA-xT-sEa">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="fEh-Xa-JAc"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="fEh-Xa-JAc">
+                            <connections>
+                                <segue destination="66Q-3L-q2U" kind="show" id="ngX-wc-8xU"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Sa0-lf-bjQ">
                             <connections>
                                 <segue destination="P3y-Oj-lpZ" kind="show" identifier="createSegue" id="92f-Kq-QRe"/>
@@ -269,7 +286,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iVe-hz-raZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="913" y="2072"/>
+            <point key="canvasLocation" x="1601" y="1317"/>
         </scene>
         <!--Press To Add Location-->
         <scene sceneID="fFa-WH-3ss">
@@ -583,6 +600,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="GjC-JN-4ww"/>
+        <segue reference="ngX-wc-8xU"/>
         <segue reference="znh-8K-Zff"/>
     </inferredMetricsTieBreakers>
 </document>

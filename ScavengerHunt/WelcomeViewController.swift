@@ -60,5 +60,31 @@ class WelcomeViewController: UIViewController, CLLocationManagerDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func playButtonPressed(sender: AnyObject) {
+        
+        //get coordinates from location manager
+        showActivityIndicator()
+//        self.locationManager?.startUpdatingLocation()
+    }
+    
+    func showActivityIndicator(){
+        
+        UIView.animateWithDuration(0.3, animations: { () -> Void in
+            self.activityIndicator.alpha = 1.0
+            
+        }) { (Bool) -> Void in
+            self.activityIndicator.startAnimating()
+        }
+    }
+    
+    func hideActivityIndicator(){
+        
+        UIView.animateWithDuration(0.3, animations: { () -> Void in
+            self.activityIndicator.alpha = 0.0
+            
+        }) { (Bool) -> Void in
+            self.activityIndicator.stopAnimating()
+        }
+    }
 
 }

@@ -1,25 +1,60 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="66Q-3L-q2U">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Welcome View Controller-->
+        <scene sceneID="u00-Hs-iEZ">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="66Q-3L-q2U" customClass="WelcomeViewController" customModule="ScavengerHunt" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="YpF-EZ-p1e"/>
+                        <viewControllerLayoutGuide type="bottom" id="18C-kn-fyt"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="top" id="Met-zu-PaY">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nyc" translatesAutoresizingMaskIntoConstraints="NO" id="i2x-r9-1nl">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c2G-o8-jE9" userLabel="Tint View">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scavenger Hunt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Oi-6s-p1h">
+                                        <rect key="frame" x="172" y="88" width="256" height="43"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="4Oi-6s-p1h" firstAttribute="centerX" secondItem="c2G-o8-jE9" secondAttribute="centerX" id="Zbm-cP-JTv"/>
+                                    <constraint firstItem="4Oi-6s-p1h" firstAttribute="top" secondItem="c2G-o8-jE9" secondAttribute="top" constant="88" id="yX3-tS-kVv"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="i2x-r9-1nl" firstAttribute="centerX" secondItem="Met-zu-PaY" secondAttribute="centerX" id="8xi-a0-rOo"/>
+                            <constraint firstItem="c2G-o8-jE9" firstAttribute="centerX" secondItem="i2x-r9-1nl" secondAttribute="centerX" id="Gfi-Oi-MQj"/>
+                            <constraint firstItem="c2G-o8-jE9" firstAttribute="centerY" secondItem="i2x-r9-1nl" secondAttribute="centerY" id="WFP-kj-rWB"/>
+                            <constraint firstItem="c2G-o8-jE9" firstAttribute="width" secondItem="i2x-r9-1nl" secondAttribute="width" id="eKs-uY-bw8"/>
+                            <constraint firstItem="i2x-r9-1nl" firstAttribute="width" secondItem="Met-zu-PaY" secondAttribute="width" id="kvp-sz-nbZ"/>
+                            <constraint firstItem="i2x-r9-1nl" firstAttribute="height" secondItem="Met-zu-PaY" secondAttribute="height" id="oc6-k6-kAm"/>
+                            <constraint firstItem="i2x-r9-1nl" firstAttribute="centerY" secondItem="Met-zu-PaY" secondAttribute="centerY" id="pZA-fW-rTH"/>
+                            <constraint firstItem="c2G-o8-jE9" firstAttribute="height" secondItem="i2x-r9-1nl" secondAttribute="height" id="vEi-Va-7nx"/>
+                        </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9uZ-cw-BO6" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="nyc" width="736" height="1309"/>
+    </resources>
 </document>

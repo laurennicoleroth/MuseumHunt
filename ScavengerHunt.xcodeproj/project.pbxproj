@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		712304F4D1388D1109E3A4B7 /* Pods_ScavengerHuntTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC33A3C561072FF3283332BB /* Pods_ScavengerHuntTests.framework */; };
 		96FE2C281CECF059000350FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FE2C271CECF059000350FF /* AppDelegate.swift */; };
-		96FE2C2A1CECF059000350FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FE2C291CECF059000350FF /* ViewController.swift */; };
 		96FE2C2D1CECF059000350FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96FE2C2B1CECF059000350FF /* Main.storyboard */; };
 		96FE2C2F1CECF059000350FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96FE2C2E1CECF059000350FF /* Assets.xcassets */; };
 		96FE2C321CECF059000350FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96FE2C301CECF059000350FF /* LaunchScreen.storyboard */; };
@@ -16,7 +16,8 @@
 		96FE2C4E1CECF275000350FF /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FE2C4A1CECF275000350FF /* Observable.swift */; };
 		96FE2C4F1CECF275000350FF /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FE2C4B1CECF275000350FF /* LocationService.swift */; };
 		96FE2C501CECF275000350FF /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FE2C4C1CECF275000350FF /* Error.swift */; };
-		96FE2C511CECF275000350FF /* ForecastDateTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FE2C4D1CECF275000350FF /* ForecastDateTime.swift */; };
+		96FE2C6B1CECFBD6000350FF /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FE2C6A1CECFBD6000350FF /* WelcomeViewController.swift */; };
+		BCE1335ACE04ED27E04A68AE /* Pods_ScavengerHunt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0D15DE6C81D366DCB225FD7 /* Pods_ScavengerHunt.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,9 +31,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		95EE4DE7CFAC04F7F312D152 /* Pods-ScavengerHunt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScavengerHunt.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScavengerHunt/Pods-ScavengerHunt.release.xcconfig"; sourceTree = "<group>"; };
 		96FE2C241CECF059000350FF /* ScavengerHunt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScavengerHunt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96FE2C271CECF059000350FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		96FE2C291CECF059000350FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		96FE2C2C1CECF059000350FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		96FE2C2E1CECF059000350FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96FE2C311CECF059000350FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -43,7 +44,13 @@
 		96FE2C4A1CECF275000350FF /* Observable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Observable.swift; path = ../../inspiration/SwiftWeather/SwiftWeather/Observable.swift; sourceTree = "<group>"; };
 		96FE2C4B1CECF275000350FF /* LocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationService.swift; path = ../../inspiration/SwiftWeather/SwiftWeather/LocationService.swift; sourceTree = "<group>"; };
 		96FE2C4C1CECF275000350FF /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Error.swift; path = ../../inspiration/SwiftWeather/SwiftWeather/Error.swift; sourceTree = "<group>"; };
-		96FE2C4D1CECF275000350FF /* ForecastDateTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForecastDateTime.swift; path = ../../inspiration/SwiftWeather/SwiftWeather/ForecastDateTime.swift; sourceTree = "<group>"; };
+		96FE2C661CECF5C3000350FF /* scavenger-regular-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "scavenger-regular-webfont.ttf"; path = "../../inspiration/SwiftWeather/SwiftWeather/fonts/scavenger-regular-webfont.ttf"; sourceTree = "<group>"; };
+		96FE2C6A1CECFBD6000350FF /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		9B8D2F0032FB1799CDF3EEFB /* Pods-ScavengerHunt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScavengerHunt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScavengerHunt/Pods-ScavengerHunt.debug.xcconfig"; sourceTree = "<group>"; };
+		C759C9328240E7B1067E4E9F /* Pods-ScavengerHuntTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScavengerHuntTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScavengerHuntTests/Pods-ScavengerHuntTests.release.xcconfig"; sourceTree = "<group>"; };
+		C9F0394DE7782FAB3CEC509F /* Pods-ScavengerHuntTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScavengerHuntTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScavengerHuntTests/Pods-ScavengerHuntTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CC33A3C561072FF3283332BB /* Pods_ScavengerHuntTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScavengerHuntTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0D15DE6C81D366DCB225FD7 /* Pods_ScavengerHunt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScavengerHunt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCE1335ACE04ED27E04A68AE /* Pods_ScavengerHunt.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,18 +66,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				712304F4D1388D1109E3A4B7 /* Pods_ScavengerHuntTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		42B9139E50A7547B0536AD61 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F0D15DE6C81D366DCB225FD7 /* Pods_ScavengerHunt.framework */,
+				CC33A3C561072FF3283332BB /* Pods_ScavengerHuntTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		96FE2C1B1CECF059000350FF = {
 			isa = PBXGroup;
 			children = (
 				96FE2C261CECF059000350FF /* ScavengerHunt */,
 				96FE2C3B1CECF059000350FF /* ScavengerHuntTests */,
 				96FE2C251CECF059000350FF /* Products */,
+				E425C1D3906BB28EE73129C5 /* Pods */,
+				42B9139E50A7547B0536AD61 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,12 +106,12 @@
 			isa = PBXGroup;
 			children = (
 				96FE2C491CECF265000350FF /* Common */,
-				96FE2C271CECF059000350FF /* AppDelegate.swift */,
-				96FE2C291CECF059000350FF /* ViewController.swift */,
-				96FE2C2B1CECF059000350FF /* Main.storyboard */,
-				96FE2C2E1CECF059000350FF /* Assets.xcassets */,
-				96FE2C301CECF059000350FF /* LaunchScreen.storyboard */,
+				96FE2C531CECF398000350FF /* Features */,
+				96FE2C521CECF36F000350FF /* Storyboards */,
 				96FE2C331CECF059000350FF /* Info.plist */,
+				96FE2C271CECF059000350FF /* AppDelegate.swift */,
+				96FE2C2E1CECF059000350FF /* Assets.xcassets */,
+				96FE2C661CECF5C3000350FF /* scavenger-regular-webfont.ttf */,
 			);
 			path = ScavengerHunt;
 			sourceTree = "<group>";
@@ -111,9 +131,44 @@
 				96FE2C4A1CECF275000350FF /* Observable.swift */,
 				96FE2C4B1CECF275000350FF /* LocationService.swift */,
 				96FE2C4C1CECF275000350FF /* Error.swift */,
-				96FE2C4D1CECF275000350FF /* ForecastDateTime.swift */,
 			);
 			name = Common;
+			sourceTree = "<group>";
+		};
+		96FE2C521CECF36F000350FF /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				96FE2C2B1CECF059000350FF /* Main.storyboard */,
+				96FE2C301CECF059000350FF /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		96FE2C531CECF398000350FF /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				96FE2C6A1CECFBD6000350FF /* WelcomeViewController.swift */,
+				96FE2C691CECFBA9000350FF /* Play Hunt */,
+			);
+			name = Features;
+			sourceTree = "<group>";
+		};
+		96FE2C691CECFBA9000350FF /* Play Hunt */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Play Hunt";
+			sourceTree = "<group>";
+		};
+		E425C1D3906BB28EE73129C5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9B8D2F0032FB1799CDF3EEFB /* Pods-ScavengerHunt.debug.xcconfig */,
+				95EE4DE7CFAC04F7F312D152 /* Pods-ScavengerHunt.release.xcconfig */,
+				C9F0394DE7782FAB3CEC509F /* Pods-ScavengerHuntTests.debug.xcconfig */,
+				C759C9328240E7B1067E4E9F /* Pods-ScavengerHuntTests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,9 +178,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 96FE2C411CECF059000350FF /* Build configuration list for PBXNativeTarget "ScavengerHunt" */;
 			buildPhases = (
+				4A76D47EE4C548021E4DA60A /* Check Pods Manifest.lock */,
 				96FE2C201CECF059000350FF /* Sources */,
 				96FE2C211CECF059000350FF /* Frameworks */,
 				96FE2C221CECF059000350FF /* Resources */,
+				F2BCE5C46E9F0C77E94EDCE4 /* Embed Pods Frameworks */,
+				CA6A9D70D1983750E8E939B1 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -140,9 +198,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 96FE2C441CECF059000350FF /* Build configuration list for PBXNativeTarget "ScavengerHuntTests" */;
 			buildPhases = (
+				67FF6D397575DC1F2471388F /* Check Pods Manifest.lock */,
 				96FE2C341CECF059000350FF /* Sources */,
 				96FE2C351CECF059000350FF /* Frameworks */,
 				96FE2C361CECF059000350FF /* Resources */,
+				9770E8BFC35018F32AADA2F8 /* Embed Pods Frameworks */,
+				F6F194BE008279AF813BE56D /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -212,14 +273,106 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4A76D47EE4C548021E4DA60A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		67FF6D397575DC1F2471388F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9770E8BFC35018F32AADA2F8 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ScavengerHuntTests/Pods-ScavengerHuntTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA6A9D70D1983750E8E939B1 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ScavengerHunt/Pods-ScavengerHunt-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F2BCE5C46E9F0C77E94EDCE4 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ScavengerHunt/Pods-ScavengerHunt-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6F194BE008279AF813BE56D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ScavengerHuntTests/Pods-ScavengerHuntTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		96FE2C201CECF059000350FF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96FE2C511CECF275000350FF /* ForecastDateTime.swift in Sources */,
 				96FE2C4E1CECF275000350FF /* Observable.swift in Sources */,
-				96FE2C2A1CECF059000350FF /* ViewController.swift in Sources */,
+				96FE2C6B1CECFBD6000350FF /* WelcomeViewController.swift in Sources */,
 				96FE2C4F1CECF275000350FF /* LocationService.swift in Sources */,
 				96FE2C501CECF275000350FF /* Error.swift in Sources */,
 				96FE2C281CECF059000350FF /* AppDelegate.swift in Sources */,
@@ -349,6 +502,7 @@
 		};
 		96FE2C421CECF059000350FF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B8D2F0032FB1799CDF3EEFB /* Pods-ScavengerHunt.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ScavengerHunt/Info.plist;
@@ -360,6 +514,7 @@
 		};
 		96FE2C431CECF059000350FF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95EE4DE7CFAC04F7F312D152 /* Pods-ScavengerHunt.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ScavengerHunt/Info.plist;
@@ -371,6 +526,7 @@
 		};
 		96FE2C451CECF059000350FF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9F0394DE7782FAB3CEC509F /* Pods-ScavengerHuntTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = ScavengerHuntTests/Info.plist;
@@ -383,6 +539,7 @@
 		};
 		96FE2C461CECF059000350FF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C759C9328240E7B1067E4E9F /* Pods-ScavengerHuntTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = ScavengerHuntTests/Info.plist;
@@ -412,6 +569,7 @@
 				96FE2C431CECF059000350FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		96FE2C441CECF059000350FF /* Build configuration list for PBXNativeTarget "ScavengerHuntTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +578,7 @@
 				96FE2C461CECF059000350FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

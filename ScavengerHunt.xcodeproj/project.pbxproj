@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		712304F4D1388D1109E3A4B7 /* Pods_ScavengerHuntTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC33A3C561072FF3283332BB /* Pods_ScavengerHuntTests.framework */; };
+		9614A1921CED06E600A648A4 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9614A1911CED06E600A648A4 /* LocationViewController.swift */; };
+		9614A1941CED125F00A648A4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9614A1931CED125F00A648A4 /* Constants.swift */; };
+		9614A1961CED1E8000A648A4 /* PlaceJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9614A1951CED1E8000A648A4 /* PlaceJSONParser.swift */; };
 		96FE2C281CECF059000350FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FE2C271CECF059000350FF /* AppDelegate.swift */; };
 		96FE2C2D1CECF059000350FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96FE2C2B1CECF059000350FF /* Main.storyboard */; };
 		96FE2C2F1CECF059000350FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96FE2C2E1CECF059000350FF /* Assets.xcassets */; };
@@ -17,6 +20,12 @@
 		96FE2C4F1CECF275000350FF /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FE2C4B1CECF275000350FF /* LocationService.swift */; };
 		96FE2C501CECF275000350FF /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FE2C4C1CECF275000350FF /* Error.swift */; };
 		96FE2C6B1CECFBD6000350FF /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FE2C6A1CECFBD6000350FF /* WelcomeViewController.swift */; };
+		96FE2C6D1CED0027000350FF /* CreateHuntTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FE2C6C1CED0027000350FF /* CreateHuntTableViewController.swift */; };
+		96FE2C6F1CED0059000350FF /* PlayTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FE2C6E1CED0059000350FF /* PlayTableViewController.swift */; };
+		96FE2C731CED0501000350FF /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FE2C711CED0501000350FF /* ListViewModel.swift */; };
+		96FE2C741CED0501000350FF /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FE2C721CED0501000350FF /* LocationViewModel.swift */; };
+		96FE2C781CED0567000350FF /* Hunt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FE2C761CED0567000350FF /* Hunt.swift */; };
+		96FE2C791CED0567000350FF /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FE2C771CED0567000350FF /* Location.swift */; };
 		BCE1335ACE04ED27E04A68AE /* Pods_ScavengerHunt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0D15DE6C81D366DCB225FD7 /* Pods_ScavengerHunt.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +41,9 @@
 
 /* Begin PBXFileReference section */
 		95EE4DE7CFAC04F7F312D152 /* Pods-ScavengerHunt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScavengerHunt.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScavengerHunt/Pods-ScavengerHunt.release.xcconfig"; sourceTree = "<group>"; };
+		9614A1911CED06E600A648A4 /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationViewController.swift; path = ../../Scavenger/Scavenger/LocationViewController.swift; sourceTree = "<group>"; };
+		9614A1931CED125F00A648A4 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = ../../inspiration/Places/Places/Constants.swift; sourceTree = "<group>"; };
+		9614A1951CED1E8000A648A4 /* PlaceJSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceJSONParser.swift; sourceTree = "<group>"; };
 		96FE2C241CECF059000350FF /* ScavengerHunt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScavengerHunt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96FE2C271CECF059000350FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96FE2C2C1CECF059000350FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -46,6 +58,12 @@
 		96FE2C4C1CECF275000350FF /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Error.swift; path = ../../inspiration/SwiftWeather/SwiftWeather/Error.swift; sourceTree = "<group>"; };
 		96FE2C661CECF5C3000350FF /* scavenger-regular-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "scavenger-regular-webfont.ttf"; path = "../../inspiration/SwiftWeather/SwiftWeather/fonts/scavenger-regular-webfont.ttf"; sourceTree = "<group>"; };
 		96FE2C6A1CECFBD6000350FF /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		96FE2C6C1CED0027000350FF /* CreateHuntTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateHuntTableViewController.swift; sourceTree = "<group>"; };
+		96FE2C6E1CED0059000350FF /* PlayTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayTableViewController.swift; sourceTree = "<group>"; };
+		96FE2C711CED0501000350FF /* ListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListViewModel.swift; path = ../../Scavenger/Scavenger/ListViewModel.swift; sourceTree = "<group>"; };
+		96FE2C721CED0501000350FF /* LocationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationViewModel.swift; path = ../../Scavenger/Scavenger/LocationViewModel.swift; sourceTree = "<group>"; };
+		96FE2C761CED0567000350FF /* Hunt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hunt.swift; path = ../../Scavenger/Scavenger/Hunt.swift; sourceTree = "<group>"; };
+		96FE2C771CED0567000350FF /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Location.swift; path = ../../Scavenger/Scavenger/Location.swift; sourceTree = "<group>"; };
 		9B8D2F0032FB1799CDF3EEFB /* Pods-ScavengerHunt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScavengerHunt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScavengerHunt/Pods-ScavengerHunt.debug.xcconfig"; sourceTree = "<group>"; };
 		C759C9328240E7B1067E4E9F /* Pods-ScavengerHuntTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScavengerHuntTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScavengerHuntTests/Pods-ScavengerHuntTests.release.xcconfig"; sourceTree = "<group>"; };
 		C9F0394DE7782FAB3CEC509F /* Pods-ScavengerHuntTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScavengerHuntTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScavengerHuntTests/Pods-ScavengerHuntTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -128,9 +146,12 @@
 		96FE2C491CECF265000350FF /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				9614A1931CED125F00A648A4 /* Constants.swift */,
 				96FE2C4A1CECF275000350FF /* Observable.swift */,
+				9614A1951CED1E8000A648A4 /* PlaceJSONParser.swift */,
 				96FE2C4B1CECF275000350FF /* LocationService.swift */,
 				96FE2C4C1CECF275000350FF /* Error.swift */,
+				96FE2C7A1CED056D000350FF /* Models */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -149,6 +170,7 @@
 			children = (
 				96FE2C6A1CECFBD6000350FF /* WelcomeViewController.swift */,
 				96FE2C691CECFBA9000350FF /* Play Hunt */,
+				96FE2C701CED0061000350FF /* Create Hunt */,
 			);
 			name = Features;
 			sourceTree = "<group>";
@@ -156,8 +178,37 @@
 		96FE2C691CECFBA9000350FF /* Play Hunt */ = {
 			isa = PBXGroup;
 			children = (
+				96FE2C6E1CED0059000350FF /* PlayTableViewController.swift */,
 			);
 			name = "Play Hunt";
+			sourceTree = "<group>";
+		};
+		96FE2C701CED0061000350FF /* Create Hunt */ = {
+			isa = PBXGroup;
+			children = (
+				96FE2C6C1CED0027000350FF /* CreateHuntTableViewController.swift */,
+				9614A1911CED06E600A648A4 /* LocationViewController.swift */,
+				96FE2C751CED053A000350FF /* ViewModels */,
+			);
+			name = "Create Hunt";
+			sourceTree = "<group>";
+		};
+		96FE2C751CED053A000350FF /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				96FE2C711CED0501000350FF /* ListViewModel.swift */,
+				96FE2C721CED0501000350FF /* LocationViewModel.swift */,
+			);
+			name = ViewModels;
+			sourceTree = "<group>";
+		};
+		96FE2C7A1CED056D000350FF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				96FE2C761CED0567000350FF /* Hunt.swift */,
+				96FE2C771CED0567000350FF /* Location.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		E425C1D3906BB28EE73129C5 /* Pods */ = {
@@ -371,10 +422,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96FE2C6D1CED0027000350FF /* CreateHuntTableViewController.swift in Sources */,
+				96FE2C791CED0567000350FF /* Location.swift in Sources */,
 				96FE2C4E1CECF275000350FF /* Observable.swift in Sources */,
+				9614A1921CED06E600A648A4 /* LocationViewController.swift in Sources */,
+				96FE2C6F1CED0059000350FF /* PlayTableViewController.swift in Sources */,
 				96FE2C6B1CECFBD6000350FF /* WelcomeViewController.swift in Sources */,
 				96FE2C4F1CECF275000350FF /* LocationService.swift in Sources */,
+				9614A1941CED125F00A648A4 /* Constants.swift in Sources */,
+				9614A1961CED1E8000A648A4 /* PlaceJSONParser.swift in Sources */,
 				96FE2C501CECF275000350FF /* Error.swift in Sources */,
+				96FE2C731CED0501000350FF /* ListViewModel.swift in Sources */,
+				96FE2C741CED0501000350FF /* LocationViewModel.swift in Sources */,
+				96FE2C781CED0567000350FF /* Hunt.swift in Sources */,
 				96FE2C281CECF059000350FF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

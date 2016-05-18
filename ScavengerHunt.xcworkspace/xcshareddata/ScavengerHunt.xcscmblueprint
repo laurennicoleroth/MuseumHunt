@@ -1,17 +1,20 @@
 {
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "BD107B37EA388186693B7BFA63B6300B0FDB8704",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "9ECDC9BBB61CC95725095A522A242235AEFD86BA" : 0,
+    "BD107B37EA388186693B7BFA63B6300B0FDB8704" : 0,
     "492025595138BCF099DE30C4AF8A0CFE00B11379" : 0,
-    "EAB0720AC0491EAEA46DBE5D94B6942417734548" : 0
+    "EAB0720AC0491EAEA46DBE5D94B6942417734548" : 0,
+    "9ECDC9BBB61CC95725095A522A242235AEFD86BA" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "7B522BE1-DBA3-4838-A432-40BE305C6643",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "9ECDC9BBB61CC95725095A522A242235AEFD86BA" : "inspiration\/Places\/",
+    "BD107B37EA388186693B7BFA63B6300B0FDB8704" : "ScavengerHunt\/",
     "492025595138BCF099DE30C4AF8A0CFE00B11379" : "Scavenger\/",
-    "EAB0720AC0491EAEA46DBE5D94B6942417734548" : "inspiration\/SwiftWeather\/"
+    "EAB0720AC0491EAEA46DBE5D94B6942417734548" : "inspiration\/SwiftWeather\/",
+    "9ECDC9BBB61CC95725095A522A242235AEFD86BA" : "inspiration\/Places\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "ScavengerHunt",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
@@ -26,6 +29,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/achilmaza\/Places.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9ECDC9BBB61CC95725095A522A242235AEFD86BA"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/laurennicoleroth\/ScavengerHunt",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "BD107B37EA388186693B7BFA63B6300B0FDB8704"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/JakeLin\/SwiftWeather.git",

@@ -59,9 +59,9 @@ class WelcomeViewController: UIViewController, CLLocationManagerDelegate {
         print("getting places")
         let params: [String:AnyObject] = ["key": Constants.Keys.GoogleKey,
                                           "radius": "2000",
-                                          "location": "\(latitude)," + "\(longitude)",
+                                          "location": "40.7484," + "-73.9857",
                                           "rankBy": "distance",
-                                          "types": "museum"]
+                                          "types": "restaurant|cafe"]
         
         Alamofire.request(.GET, Constants.Url.GoogleApiPlaceSearchJson, parameters: params)
             .responseJSON {

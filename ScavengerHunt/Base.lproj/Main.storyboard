@@ -127,7 +127,7 @@
             </objects>
             <point key="canvasLocation" x="135" y="2072"/>
         </scene>
-        <!--Create Hunt Table View Controller-->
+        <!--Scavenger Hunt Locations-->
         <scene sceneID="wPa-D5-Kc5">
             <objects>
                 <tableViewController id="7ya-GE-O0C" customClass="CreateHuntTableViewController" customModule="ScavengerHunt" customModuleProvider="target" sceneMemberID="viewController">
@@ -136,8 +136,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="mwg-pA-BaQ">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="2pg-gg-xp2" detailTextLabel="XFN-P9-ZEV" style="IBUITableViewCellStyleSubtitle" id="IYD-nW-gCK">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IYD-nW-gCK" id="HVZ-u5-MP1">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2pg-gg-xp2">
+                                            <rect key="frame" x="15" y="6" width="31.5" height="19.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XFN-P9-ZEV">
+                                            <rect key="frame" x="15" y="25.5" width="40.5" height="13.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="P3y-Oj-lpZ" kind="show" identifier="editSegue" id="GjC-JN-4ww"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="mwg-pA-BaQ">
+                                <rect key="frame" x="0.0" y="136" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mwg-pA-BaQ" id="yRZ-tJ-QQS">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -150,13 +177,48 @@
                             <outlet property="delegate" destination="7ya-GE-O0C" id="UFZ-YE-Vei"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="9kA-xT-sEa">
+                    <navigationItem key="navigationItem" title="Scavenger Hunt Locations" id="9kA-xT-sEa">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="fEh-Xa-JAc"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Sa0-lf-bjQ">
+                            <connections>
+                                <segue destination="P3y-Oj-lpZ" kind="show" identifier="createSegue" id="92f-Kq-QRe"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iVe-hz-raZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="913" y="2072"/>
+        </scene>
+        <!--Press To Add Location-->
+        <scene sceneID="fFa-WH-3ss">
+            <objects>
+                <viewController title="Press To Add Location" id="P3y-Oj-lpZ" customClass="LocationViewController" customModule="ScavengerHunt" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xAE-HS-xjI"/>
+                        <viewControllerLayoutGuide type="bottom" id="Fuy-ns-itY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="t0X-hf-Xjx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="KdE-xz-N6h">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem title="Item" id="yyq-lQ-Gh1"/>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="locationMapView" destination="KdE-xz-N6h" id="132-jR-9pP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ieV-rN-up8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1608" y="2072"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="y5D-El-1bu">
@@ -194,8 +256,251 @@
             </objects>
             <point key="canvasLocation" x="913" y="1317"/>
         </scene>
+        <!--Add A Location-->
+        <scene sceneID="TdQ-23-cTb">
+            <objects>
+                <viewController id="58e-fG-EqI" customClass="LocationViewController" customModule="ScavengerHunt" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VXU-oa-dn9"/>
+                        <viewControllerLayoutGuide type="bottom" id="6yL-Rv-RqO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4BU-LW-LIH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="c0c-lw-U7Q">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="c0c-lw-U7Q" secondAttribute="trailing" constant="-20" id="2CK-x1-qaG"/>
+                            <constraint firstItem="6yL-Rv-RqO" firstAttribute="top" secondItem="c0c-lw-U7Q" secondAttribute="bottom" id="qsu-9E-qs5"/>
+                            <constraint firstItem="c0c-lw-U7Q" firstAttribute="top" secondItem="VXU-oa-dn9" secondAttribute="bottom" id="t1q-g8-sBN"/>
+                            <constraint firstItem="c0c-lw-U7Q" firstAttribute="leading" secondItem="4BU-LW-LIH" secondAttribute="leadingMargin" constant="-20" id="zRj-27-ZQb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add A Location" id="Ssn-Kw-aG3">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="mCa-7C-GCF">
+                            <connections>
+                                <action selector="cancelPressed:" destination="58e-fG-EqI" id="loL-la-UMy"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="U0u-26-ioH">
+                            <connections>
+                                <action selector="donePressed:" destination="58e-fG-EqI" id="yQY-gf-hZh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="locationMapView" destination="c0c-lw-U7Q" id="atd-rZ-yJJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sm3-aV-IOz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2311" y="445"/>
+        </scene>
+        <!--Add A Location-->
+        <scene sceneID="nJE-PP-oMu">
+            <objects>
+                <viewController id="sFI-ei-fZB" customClass="LocationViewController" customModule="ScavengerHunt" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iP4-Hm-qcA"/>
+                        <viewControllerLayoutGuide type="bottom" id="cLy-Pr-tET"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CNZ-Ig-ubY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ru5-J8-aKs">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cLy-Pr-tET" firstAttribute="top" secondItem="ru5-J8-aKs" secondAttribute="bottom" id="Mdr-dE-MfI"/>
+                            <constraint firstItem="ru5-J8-aKs" firstAttribute="leading" secondItem="CNZ-Ig-ubY" secondAttribute="leadingMargin" constant="-20" id="RCT-1t-HQq"/>
+                            <constraint firstItem="ru5-J8-aKs" firstAttribute="top" secondItem="iP4-Hm-qcA" secondAttribute="bottom" id="Xtg-Ir-l3u"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ru5-J8-aKs" secondAttribute="trailing" constant="-20" id="vWk-c5-nU5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add A Location" id="jTz-hy-GYh">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="CMa-Lf-6hu">
+                            <connections>
+                                <action selector="cancelPressed:" destination="sFI-ei-fZB" id="jWx-Im-U68"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="do7-61-qp9">
+                            <connections>
+                                <action selector="donePressed:" destination="sFI-ei-fZB" id="LGu-2V-YaD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="locationMapView" destination="ru5-J8-aKs" id="bNL-UG-pHw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MbG-I5-J0N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2264" y="445"/>
+        </scene>
+        <!--Add A Location-->
+        <scene sceneID="NlO-Cl-XrM">
+            <objects>
+                <viewController id="Ml9-dg-nCT" customClass="LocationViewController" customModule="ScavengerHunt" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TJi-WN-4rs"/>
+                        <viewControllerLayoutGuide type="bottom" id="qEH-hR-hKO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="W2o-hv-5DU">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="laZ-Wo-pDd">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="laZ-Wo-pDd" firstAttribute="top" secondItem="TJi-WN-4rs" secondAttribute="bottom" id="Bcv-ey-Ums"/>
+                            <constraint firstItem="laZ-Wo-pDd" firstAttribute="leading" secondItem="W2o-hv-5DU" secondAttribute="leadingMargin" constant="-20" id="E8P-bp-DBe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="laZ-Wo-pDd" secondAttribute="trailing" constant="-20" id="dZt-bC-xhq"/>
+                            <constraint firstItem="qEH-hR-hKO" firstAttribute="top" secondItem="laZ-Wo-pDd" secondAttribute="bottom" id="kYf-0a-CG2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add A Location" id="VgC-36-QKc">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="oJ9-zC-h2A">
+                            <connections>
+                                <action selector="cancelPressed:" destination="Ml9-dg-nCT" id="HYL-ha-Urv"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="61z-Sp-FmH">
+                            <connections>
+                                <action selector="donePressed:" destination="Ml9-dg-nCT" id="vkp-ya-uSX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="locationMapView" destination="laZ-Wo-pDd" id="fUB-9y-lLM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uTv-Vb-se7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2264" y="445"/>
+        </scene>
+        <!--Scavenger Hunt Locations-->
+        <scene sceneID="VYq-4T-z4l">
+            <objects>
+                <tableViewController id="znb-WA-nA1" customClass="MasterTableViewController" customModule="ScavengerHunt" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="J4j-um-tI3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="hf3-12-x85" detailTextLabel="rge-Ds-GX7" style="IBUITableViewCellStyleSubtitle" id="HMR-KT-twE">
+                                <rect key="frame" x="0.0" y="22" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HMR-KT-twE" id="nMn-r5-iYb">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hf3-12-x85">
+                                            <rect key="frame" x="15" y="6" width="31.5" height="19.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rge-Ds-GX7">
+                                            <rect key="frame" x="15" y="25.5" width="40.5" height="13.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="nA0-6A-Ikr" kind="show" identifier="editSegue" id="bqL-9C-ul0">
+                                        <nil key="action"/>
+                                    </segue>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="znb-WA-nA1" id="kif-ET-xzY"/>
+                            <outlet property="delegate" destination="znb-WA-nA1" id="dF9-K9-bjo"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Scavenger Hunt Locations" id="6EB-OR-AQY">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="qFF-W4-dRU">
+                            <connections>
+                                <action selector="cancelPressed:" destination="znb-WA-nA1" id="kcp-Py-2bh"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="EQc-yi-PQ4">
+                            <connections>
+                                <segue destination="nA0-6A-Ikr" kind="show" identifier="createSegue" id="znh-8K-Zff">
+                                    <nil key="action"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xlb-9g-WQG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1595" y="445"/>
+        </scene>
+        <!--Add A Location-->
+        <scene sceneID="weu-qm-wv3">
+            <objects>
+                <viewController id="nA0-6A-Ikr" customClass="LocationViewController" customModule="ScavengerHunt" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4CH-oO-F1a"/>
+                        <viewControllerLayoutGuide type="bottom" id="bgi-vY-qXD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Dab-UW-hrW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="WO4-Y2-rxe">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="WO4-Y2-rxe" secondAttribute="trailing" constant="-20" id="D8x-wm-kqa"/>
+                            <constraint firstItem="WO4-Y2-rxe" firstAttribute="top" secondItem="4CH-oO-F1a" secondAttribute="bottom" id="fOP-Xy-Vcv"/>
+                            <constraint firstItem="WO4-Y2-rxe" firstAttribute="leading" secondItem="Dab-UW-hrW" secondAttribute="leadingMargin" constant="-20" id="jUe-Ny-cSn"/>
+                            <constraint firstItem="bgi-vY-qXD" firstAttribute="top" secondItem="WO4-Y2-rxe" secondAttribute="bottom" id="kLA-Su-jHT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add A Location" id="gT8-dg-0jT">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Oad-x0-L4F">
+                            <connections>
+                                <action selector="cancelPressed:" destination="nA0-6A-Ikr" id="8dq-bD-aev"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="QLi-ho-TKu">
+                            <connections>
+                                <action selector="donePressed:" destination="nA0-6A-Ikr" id="06A-Es-KnP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="locationMapView" destination="WO4-Y2-rxe" id="gvQ-sO-xYF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QRa-Da-MFZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2264" y="445"/>
+        </scene>
     </scenes>
     <resources>
         <image name="nyc" width="736" height="1309"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="GjC-JN-4ww"/>
+        <segue reference="znh-8K-Zff"/>
+    </inferredMetricsTieBreakers>
 </document>

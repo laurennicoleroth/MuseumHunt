@@ -38,7 +38,6 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="playButtonPressed:" destination="66Q-3L-q2U" eventType="touchUpInside" id="MAs-Zd-zFp"/>
                                             <segue destination="vXY-dj-mdA" kind="show" identifier="playPlaces" id="qr4-tM-hs7"/>
                                         </connections>
                                     </button>

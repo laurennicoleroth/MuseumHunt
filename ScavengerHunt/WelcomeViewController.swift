@@ -84,9 +84,6 @@ class WelcomeViewController: UIViewController, CLLocationManagerDelegate {
     
     func viewPlaces(places: [Place]) {
         hideActivityIndicator()
-
-//        print(places)
-        
         huntPlaces = places
     }
     
@@ -103,14 +100,6 @@ class WelcomeViewController: UIViewController, CLLocationManagerDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    @IBAction func playButtonPressed(sender: AnyObject) {
-        
-        //get coordinates from location manager
-//        showActivityIndicator()
-//        getPlaces()
-//        self.locationManager?.startUpdatingLocation()
     }
     
     func showActivityIndicator(){

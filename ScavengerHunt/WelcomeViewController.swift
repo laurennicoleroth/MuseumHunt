@@ -17,7 +17,7 @@ class WelcomeViewController: UIViewController, CLLocationManagerDelegate {
     var locationManager: CLLocationManager?
     var latitude: Double = 0.0
     var longitude: Double = 0.0
-    var places : [Place] = []
+    var huntPlaces: [Place] = []
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
@@ -64,8 +64,8 @@ class WelcomeViewController: UIViewController, CLLocationManagerDelegate {
                 if let data = response.data {
                     let json = JSON(data: data)
                     let places = PlaceJSONParser.createFrom(json)
-                    self.viewPlaces(places)
                     
+                    self.viewPlaces(places)
                     
                     let coordinates = CLLocationCoordinate2DMake(self.latitude, self.longitude)
                     let geoCoder = GMSGeocoder()
@@ -84,7 +84,10 @@ class WelcomeViewController: UIViewController, CLLocationManagerDelegate {
     
     func viewPlaces(places: [Place]) {
         hideActivityIndicator()
+
+//        print(places)
         
+        huntPlaces = places
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -92,9 +95,8 @@ class WelcomeViewController: UIViewController, CLLocationManagerDelegate {
             if (segue.identifier == "playPlaces") {
                 showActivityIndicator()
                 getPlaces()
+                vc.playablePlaces = huntPlaces
                 self.locationManager?.startUpdatingLocation()
-                print(places)
-                vc.playablePlaces = places
             }
     }
 

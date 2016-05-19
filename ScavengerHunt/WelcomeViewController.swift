@@ -84,18 +84,22 @@ class WelcomeViewController: UIViewController, CLLocationManagerDelegate {
     
     func viewPlaces(places: [Place]) {
         hideActivityIndicator()
-        huntPlaces = places
+        let storyboard = UIStoryboard(name: "Main", bundle: NSBundle(forClass: self.dynamicType))
+        if let placesTVC = storyboard.instantiateViewControllerWithIdentifier("PlayTableViewController") as? PlayTableViewController {
+            placesTVC.playablePlaces = places
+            print(places)
+            self.navigationController?.pushViewController(placesTVC, animated: true)
+        }
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let vc = segue.destinationViewController as! PlayTableViewController
-            if (segue.identifier == "playPlaces") {
-                showActivityIndicator()
-                getPlaces()
-                vc.playablePlaces = huntPlaces
-                self.locationManager?.startUpdatingLocation()
-            }
-    }
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        let vc = segue.destinationViewController as! PlayTableViewController
+//        if (segue.identifier == "playPlaces") {
+//            showActivityIndicator()
+//            getPlaces()
+//            self.locationManager?.startUpdatingLocation()
+//        }
+//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -17,23 +17,8 @@ class PlayTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        Alamofire.request(.GET, "http://dev-hl.sherlockpipeline.com/api/getFilterItems").responseJSON { (response) in
-//            
-//            if let value = response.result.value {
-//                
-//                let json = JSON(value)
-//                
-//                for i in 1...20 {
-//                    
-//                    let id = json["\(i)"].dictionaryValue
-//                    
-//                    if let height = id["height"]?.stringValue {
-//                        
-//                        print(height)
-//                    }
-//                }
-//            }
-//        }
+        print(playablePlaces)
+
         
     }
 

@@ -17,22 +17,21 @@ class WelcomeViewController: UIViewController, CLLocationManagerDelegate {
     var locationManager: CLLocationManager?
     var latitude: Double = 0.0
     var longitude: Double = 0.0
-    var huntPlaces: [Place] = []
-    
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "Search"
         activityIndicator.alpha = 0.0
-
         setupLocationManager()
     }
     
-    func setupLocationManager() {
+    func setupLocationManager(){
+        
         locationManager = CLLocationManager()
         self.locationManager?.delegate = self
         self.locationManager?.desiredAccuracy = kCLLocationAccuracyBest
-        self.locationManager?.requestAlwaysAuthorization()
+        self.locationManager?.requestWhenInUseAuthorization()
         self.locationManager?.distanceFilter = 100.0
     }
     
@@ -43,29 +42,35 @@ class WelcomeViewController: UIViewController, CLLocationManagerDelegate {
         
         if let currentLocation: CLLocation = locations.last {
             
+            print(currentLocation)
             latitude = currentLocation.coordinate.latitude
             longitude = currentLocation.coordinate.longitude
             
+            print(latitude)
+            print(longitude)
+            
+            getPlaces()
         }
         
     }
     
+    
     func getPlaces(){
+        
         let params: [String:AnyObject] = ["key": Constants.Keys.GoogleKey,
                                           "radius": "2000",
-                                          "location": "40.7484," + "-73.9857",
+                                          "location": "\(latitude)," + "\(longitude)",
                                           "rankBy": "distance",
-                                          "types": "museum"]
+                                          "types": "restaurant|cafe"]
         
         Alamofire.request(.GET, Constants.Url.GoogleApiPlaceSearchJson, parameters: params)
             .responseJSON {
                 response in
-                
                 if let data = response.data {
                     let json = JSON(data: data)
                     let places = PlaceJSONParser.createFrom(json)
-                    
                     self.viewPlaces(places)
+                    
                     
                     let coordinates = CLLocationCoordinate2DMake(self.latitude, self.longitude)
                     let geoCoder = GMSGeocoder()
@@ -73,6 +78,7 @@ class WelcomeViewController: UIViewController, CLLocationManagerDelegate {
                         (response, error) -> Void in
                         
                         let address = response?.firstResult()
+                        print(address)
                         
                     })
                     
@@ -82,29 +88,34 @@ class WelcomeViewController: UIViewController, CLLocationManagerDelegate {
         
     }
     
+    
+    override func viewWillAppear(animated: Bool) {
+        
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.hidden = true
+        
+        
+    }
+    
+
+    
+    @IBAction func playButtonPressed(sender: AnyObject) {
+            //get coordinates from location manager
+            showActivityIndicator()
+            self.locationManager?.startUpdatingLocation()
+    }
+    
+    
     func viewPlaces(places: [Place]) {
+        print(places)
         hideActivityIndicator()
         let storyboard = UIStoryboard(name: "Main", bundle: NSBundle(forClass: self.dynamicType))
         if let placesTVC = storyboard.instantiateViewControllerWithIdentifier("PlayTableViewController") as? PlayTableViewController {
             placesTVC.playablePlaces = places
-            print(places)
             self.navigationController?.pushViewController(placesTVC, animated: true)
         }
     }
     
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        let vc = segue.destinationViewController as! PlayTableViewController
-//        if (segue.identifier == "playPlaces") {
-//            showActivityIndicator()
-//            getPlaces()
-//            self.locationManager?.startUpdatingLocation()
-//        }
-//    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     func showActivityIndicator(){
         
@@ -125,5 +136,7 @@ class WelcomeViewController: UIViewController, CLLocationManagerDelegate {
             self.activityIndicator.stopAnimating()
         }
     }
+    
+
 
 }

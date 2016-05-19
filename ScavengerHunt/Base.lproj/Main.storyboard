@@ -39,7 +39,7 @@
                                         </state>
                                         <connections>
                                             <action selector="playButtonPressed:" destination="66Q-3L-q2U" eventType="touchUpInside" id="MAs-Zd-zFp"/>
-                                            <segue destination="Zs9-oo-Yao" kind="show" identifier="playPlaces" id="9yS-lz-BPE"/>
+                                            <segue destination="vXY-dj-mdA" kind="show" identifier="playPlaces" id="qr4-tM-hs7"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ArJ-cR-E0N">
@@ -116,7 +116,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlaceCell" rowHeight="135" id="EQ3-79-Y4b" customClass="PlaceTableViewCell" customModule="ScavengerHunt" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="135"/>
+                                <rect key="frame" x="0.0" y="28" width="600" height="135"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EQ3-79-Y4b" id="gBy-O6-LXB">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="134.5"/>
@@ -197,7 +197,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ofk-Gr-47g">
-                                <rect key="frame" x="0.0" y="227" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="163" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ofk-Gr-47g" id="ERl-NQ-xDq">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -220,7 +220,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dYh-rv-Xty" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="135" y="2029"/>
+            <point key="canvasLocation" x="259" y="1322"/>
         </scene>
         <!--Scavenger Hunt Locations-->
         <scene sceneID="wPa-D5-Kc5">
@@ -335,7 +335,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZBa-jH-p3A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="135" y="1317"/>
+            <point key="canvasLocation" x="-364" y="1358"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sYc-RZ-369">
@@ -601,6 +601,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="PK9-rq-LmJ"/>
+        <segue reference="qr4-tM-hs7"/>
         <segue reference="GjC-JN-4ww"/>
         <segue reference="znh-8K-Zff"/>
     </inferredMetricsTieBreakers>

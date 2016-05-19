@@ -43,7 +43,6 @@ class WelcomeViewController: UIViewController, CLLocationManagerDelegate {
         
         if let currentLocation: CLLocation = locations.last {
             
-            print("Current location: \(currentLocation)")
             latitude = currentLocation.coordinate.latitude
             longitude = currentLocation.coordinate.longitude
             
@@ -52,7 +51,6 @@ class WelcomeViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func getPlaces(){
-        print("getting places")
         let params: [String:AnyObject] = ["key": Constants.Keys.GoogleKey,
                                           "radius": "2000",
                                           "location": "40.7484," + "-73.9857",
@@ -63,7 +61,6 @@ class WelcomeViewController: UIViewController, CLLocationManagerDelegate {
             .responseJSON {
                 response in
                 
-                print(response)
                 if let data = response.data {
                     let json = JSON(data: data)
                     let places = PlaceJSONParser.createFrom(json)
@@ -76,7 +73,6 @@ class WelcomeViewController: UIViewController, CLLocationManagerDelegate {
                         (response, error) -> Void in
                         
                         let address = response?.firstResult()
-                        print(address)
                         
                     })
                     
@@ -89,22 +85,15 @@ class WelcomeViewController: UIViewController, CLLocationManagerDelegate {
     func viewPlaces(places: [Place]) {
         hideActivityIndicator()
         
-        print("viewing places, ie. preparing the tableview")
-        
-//        let storyboard = UIStoryboard(name: "Main", bundle: NSBundle(forClass: self.dynamicType))
-//        if let scavengerHuntPlaces = df.instantiateViewControllerWithIdentifier("PlayTableViewController") as? PlayTableViewController {
-//            scavengerHuntPlaces.playablePlaces = places
-//            self.navigationController?.pushViewController(scavengerHuntPlaces, animated: true)
-//        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let vc = segue.destinationViewController as! PlayTableViewController
             if (segue.identifier == "playPlaces") {
-                print("going there!")
                 showActivityIndicator()
                 getPlaces()
-    //            self.locationManager?.startUpdatingLocation()
+                self.locationManager?.startUpdatingLocation()
+                print(places)
                 vc.playablePlaces = places
             }
     }

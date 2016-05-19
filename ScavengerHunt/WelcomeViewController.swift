@@ -71,8 +71,7 @@ class WelcomeViewController: UIViewController, CLLocationManagerDelegate {
                 if let data = response.data {
                     let json = JSON(data: data)
                     let places = PlaceJSONParser.createFrom(json)
-                    print(places)
-//                    self.viewPlaces(places)
+                    self.viewPlaces(places)
                     
                     
                     let coordinates = CLLocationCoordinate2DMake(self.latitude, self.longitude)
@@ -90,6 +89,16 @@ class WelcomeViewController: UIViewController, CLLocationManagerDelegate {
         }
         
     }
+    
+    func viewPlaces(places: [Place]) {
+        hideActivityIndicator()
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: NSBundle(forClass: self.dynamicType))
+        if let scavengerHuntPlaces = storyboard.instantiateViewControllerWithIdentifier("PlayTableViewController") as? PlayTableViewController {
+            scavengerHuntPlaces.playablePlaces = places
+            self.navigationController?.pushViewController(scavengerHuntPlaces, animated: true)
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -101,7 +110,6 @@ class WelcomeViewController: UIViewController, CLLocationManagerDelegate {
         //get coordinates from location manager
         showActivityIndicator()
         getPlaces()
-        hideActivityIndicator()
 //        self.locationManager?.startUpdatingLocation()
     }
     

@@ -11,6 +11,8 @@ import Alamofire
 import SwiftyJSON
 
 class PlayTableViewController: UITableViewController {
+    
+    var playablePlaces: [Place]?
 
     override func viewDidLoad() {
         super.viewDidLoad()

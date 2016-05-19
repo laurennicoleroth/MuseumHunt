@@ -20,6 +20,7 @@
 		9614A1D41CED52A800A648A4 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9614A1CB1CED52A800A648A4 /* WebViewController.swift */; };
 		9614A1D71CED539E00A648A4 /* PlaceDetailSubview.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9614A1D51CED539E00A648A4 /* PlaceDetailSubview.xib */; };
 		9614A1D81CED539E00A648A4 /* PlaceDetailSubview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9614A1D61CED539E00A648A4 /* PlaceDetailSubview.swift */; };
+		9614A1DE1CED5C7600A648A4 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9614A1DD1CED5C7600A648A4 /* ArrayExtension.swift */; };
 		96FE2C2D1CECF059000350FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96FE2C2B1CECF059000350FF /* Main.storyboard */; };
 		96FE2C2F1CECF059000350FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96FE2C2E1CECF059000350FF /* Assets.xcassets */; };
 		96FE2C321CECF059000350FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96FE2C301CECF059000350FF /* LaunchScreen.storyboard */; };
@@ -51,6 +52,7 @@
 		9614A1CB1CED52A800A648A4 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebViewController.swift; path = ../../inspiration/Places/Places/WebViewController.swift; sourceTree = "<group>"; };
 		9614A1D51CED539E00A648A4 /* PlaceDetailSubview.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PlaceDetailSubview.xib; path = ../../inspiration/Places/Places/PlaceDetailSubview.xib; sourceTree = "<group>"; };
 		9614A1D61CED539E00A648A4 /* PlaceDetailSubview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaceDetailSubview.swift; path = ../../inspiration/Places/Places/PlaceDetailSubview.swift; sourceTree = "<group>"; };
+		9614A1DD1CED5C7600A648A4 /* ArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 		96FE2C241CECF059000350FF /* ScavengerHunt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScavengerHunt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96FE2C2C1CECF059000350FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		96FE2C2E1CECF059000350FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				9614A1CB1CED52A800A648A4 /* WebViewController.swift */,
 				9614A1C71CED52A800A648A4 /* ViewController.swift */,
 				9614A1C91CED52A800A648A4 /* PlacesTableViewController.swift */,
+				9614A1DD1CED5C7600A648A4 /* ArrayExtension.swift */,
 				9614A1CA1CED52A800A648A4 /* PlaceDetailsViewController.swift */,
 			);
 			name = Controllers;
@@ -404,6 +407,7 @@
 				9614A1CF1CED52A800A648A4 /* AppDelegate.swift in Sources */,
 				9614A1941CED125F00A648A4 /* Constants.swift in Sources */,
 				9614A1D01CED52A800A648A4 /* ViewController.swift in Sources */,
+				9614A1DE1CED5C7600A648A4 /* ArrayExtension.swift in Sources */,
 				9614A1D21CED52A800A648A4 /* PlacesTableViewController.swift in Sources */,
 				9614A1D11CED52A800A648A4 /* PlaceJSONParser.swift in Sources */,
 				9614A1D31CED52A800A648A4 /* PlaceDetailsViewController.swift in Sources */,

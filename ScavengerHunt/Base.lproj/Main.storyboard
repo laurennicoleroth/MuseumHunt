@@ -230,7 +230,7 @@
             </objects>
             <point key="canvasLocation" x="2903" y="518"/>
         </scene>
-        <!--Places-->
+        <!--Hunt Clues-->
         <scene sceneID="tsx-py-khH">
             <objects>
                 <tableViewController storyboardIdentifier="PlacesTableViewController" id="mew-G9-AMf" customClass="PlacesTableViewController" customModule="ScavengerHunt" customModuleProvider="target" sceneMemberID="viewController">
@@ -326,7 +326,7 @@
                             <outlet property="delegate" destination="mew-G9-AMf" id="ZeI-4G-8lD"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Places" id="AnV-b9-ud5"/>
+                    <navigationItem key="navigationItem" title="Hunt Clues" id="AnV-b9-ud5"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qNT-z6-OHb" userLabel="First Responder" sceneMemberID="firstResponder"/>

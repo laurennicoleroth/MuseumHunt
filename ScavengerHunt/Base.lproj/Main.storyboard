@@ -39,6 +39,7 @@
                                         </state>
                                         <connections>
                                             <action selector="playButtonPressed:" destination="66Q-3L-q2U" eventType="touchUpInside" id="MAs-Zd-zFp"/>
+                                            <segue destination="Zs9-oo-Yao" kind="show" identifier="playPlaces" id="9yS-lz-BPE"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ArJ-cR-E0N">
@@ -108,7 +109,7 @@
         <!--Play Table View Controller-->
         <scene sceneID="ogf-5z-VH8">
             <objects>
-                <tableViewController id="vXY-dj-mdA" customClass="PlayTableViewController" customModule="ScavengerHunt" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="PlayTableViewController" id="vXY-dj-mdA" customClass="PlayTableViewController" customModule="ScavengerHunt" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="SY0-GE-dAh">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -219,7 +220,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dYh-rv-Xty" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-503" y="1317"/>
+            <point key="canvasLocation" x="135" y="2029"/>
         </scene>
         <!--Scavenger Hunt Locations-->
         <scene sceneID="wPa-D5-Kc5">
@@ -599,8 +600,8 @@
         <image name="nyc" width="736" height="1309"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="PK9-rq-LmJ"/>
         <segue reference="GjC-JN-4ww"/>
-        <segue reference="ngX-wc-8xU"/>
         <segue reference="znh-8K-Zff"/>
     </inferredMetricsTieBreakers>
 </document>

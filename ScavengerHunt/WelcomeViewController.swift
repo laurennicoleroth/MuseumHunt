@@ -17,10 +17,10 @@ class WelcomeViewController: UIViewController, CLLocationManagerDelegate {
     var locationManager: CLLocationManager?
     var latitude: Double = 0.0
     var longitude: Double = 0.0
+    var places : [Place] = []
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         activityIndicator.alpha = 0.0
@@ -43,13 +43,9 @@ class WelcomeViewController: UIViewController, CLLocationManagerDelegate {
         
         if let currentLocation: CLLocation = locations.last {
             
-            print(currentLocation)
+            print("Current location: \(currentLocation)")
             latitude = currentLocation.coordinate.latitude
             longitude = currentLocation.coordinate.longitude
-            
-            print(latitude)
-            print(longitude)
-            
             
         }
         
@@ -93,11 +89,24 @@ class WelcomeViewController: UIViewController, CLLocationManagerDelegate {
     func viewPlaces(places: [Place]) {
         hideActivityIndicator()
         
-        let storyboard = UIStoryboard(name: "Main", bundle: NSBundle(forClass: self.dynamicType))
-        if let scavengerHuntPlaces = storyboard.instantiateViewControllerWithIdentifier("PlayTableViewController") as? PlayTableViewController {
-            scavengerHuntPlaces.playablePlaces = places
-            self.navigationController?.pushViewController(scavengerHuntPlaces, animated: true)
-        }
+        print("viewing places, ie. preparing the tableview")
+        
+//        let storyboard = UIStoryboard(name: "Main", bundle: NSBundle(forClass: self.dynamicType))
+//        if let scavengerHuntPlaces = df.instantiateViewControllerWithIdentifier("PlayTableViewController") as? PlayTableViewController {
+//            scavengerHuntPlaces.playablePlaces = places
+//            self.navigationController?.pushViewController(scavengerHuntPlaces, animated: true)
+//        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let vc = segue.destinationViewController as! PlayTableViewController
+            if (segue.identifier == "playPlaces") {
+                print("going there!")
+                showActivityIndicator()
+                getPlaces()
+    //            self.locationManager?.startUpdatingLocation()
+                vc.playablePlaces = places
+            }
     }
 
     override func didReceiveMemoryWarning() {
@@ -108,8 +117,8 @@ class WelcomeViewController: UIViewController, CLLocationManagerDelegate {
     @IBAction func playButtonPressed(sender: AnyObject) {
         
         //get coordinates from location manager
-        showActivityIndicator()
-        getPlaces()
+//        showActivityIndicator()
+//        getPlaces()
 //        self.locationManager?.startUpdatingLocation()
     }
     
